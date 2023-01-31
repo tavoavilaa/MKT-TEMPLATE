@@ -1,0 +1,23 @@
+// Import all of Bootstrap's CSS
+@use 'variables';
+@use 'components';
+@use 'buttons';
+@use 'navbar';
+@use 'footer';
+@import "~bootstrap/scss/bootstrap";
+
+
+body {
+  background-color: variables.$white;
+  color: variables.$black;
+  font-family: variables.$fontMain;
+  font-size: 16px;
+}
+
+code{
+  color: variables.$red !important;
+}
+
+
+
+

@@ -1,0 +1,209 @@
+@use "variables";
+
+.avaya-btn {
+  background: variables.$denim;
+  border: none;
+  border-radius: 0px;
+  box-shadow: 3px 2px 20px #4e4c4c59;
+  color: variables.$white;
+  display: inline-block;
+  font-size: 18px;
+  font-weight: 500;
+  overflow: hidden;
+  position: relative;
+  text-decoration: none;
+
+  &:hover {
+    color: variables.$white;
+  }
+}
+.avaya-btn svg {
+  height: 1.2em;
+  margin-right: 0.5em;
+  width: 1.2em;
+}
+.avaya-btn span {
+  align-items: center;
+  display: inline-flex;
+  font-size: 14px;
+  font-weight: 700;
+  justify-content: center;
+  letter-spacing: 0;
+  min-height: 44px;
+  min-width: 152px;
+  position: relative;
+  transition: color 0.3s;
+  z-index: 10;
+}
+.avaya-btn:after,
+.avaya-btn:before {
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: 0;
+}
+.avaya-btn:before {
+  background: variables.$ocean;
+  content: "";
+  left: -15%;
+  transform: skew(40deg);
+  transition: transform 0.6s cubic-bezier(0.3, 1, 0.8, 1);
+  width: 130%;
+}
+.avaya-btn:hover:before {
+  transform: translate3d(100%, 0, 0);
+}
+.avaya-btn:active {
+  transform: scale(0.95);
+}
+
+// SECUNDARY BTN
+.avaya-btn--secundary {
+  background: variables.$denim;
+  color: variables.$ocean;
+
+  &:hover {
+    color: variables.$white;
+  }
+
+  &:before{
+    background: variables.$white;
+  }
+}
+
+
+
+// RED BTN
+.avaya-btn--red {
+  background: variables.$denim;
+  color: variables.$white;
+
+  &:hover {
+    color: variables.$white;
+  }
+  &:before{
+    background: variables.$red;
+  }
+}
+
+// TEAL BTN
+.avaya-btn--teal {
+  background: variables.$denim;
+  color: variables.$white;
+
+  &:hover {
+    color: variables.$white;
+  }
+
+  &:before{
+    background: variables.$teal;
+  }
+}
+
+// DENIM BTN
+.avaya-btn--denim {
+  background: variables.$red;
+  color: variables.$white;
+
+  &:hover {
+    color: variables.$white;
+  }
+
+  &:before{
+    background: variables.$denim;
+  }
+}
+
+
+.pulse {
+  animation: pulse-ocean 2s infinite;
+  font-size: 1.1rem;
+  transition: all ease;
+}
+
+.pulse:hover {
+  animation: pulse-denim 2s infinite;
+  transition: all ease;
+}
+
+@keyframes pulse-red {
+  0% {
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0.7);
+    transform: scale(0.99);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    transform: scale(1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    transform: scale(0.99);
+  }
+}
+
+@keyframes pulse-ocean {
+  0% {
+    box-shadow: 0 0 0 0 rgba(82, 186, 255, 0.7);
+    transform: scale(0.99);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(255, 82, 82, 0);
+    transform: scale(1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(255, 82, 82, 0);
+    transform: scale(0.99);
+  }
+}
+
+@keyframes pulse-denim {
+  0% {
+    box-shadow: 0 0 0 0 rgba(0, 80, 137, 0.7);
+    transform: scale(0.99);
+  }
+
+  70% {
+    box-shadow: 0 0 0 10px rgba(82, 183, 255, 0);
+    transform: scale(1);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 rgba(82, 143, 255, 0);
+    transform: scale(0.99);
+  }
+}
+
+#topBtn {
+  background-color: variables.$red;
+  border: none;
+  border-radius: 0px;
+  bottom: 20px;
+  color: variables.$white;
+  cursor: pointer;
+  display: none;
+  font-size: 18px;
+  outline: none;
+  padding: 4px 8px 6px;
+  position: fixed;
+  right: 30px;
+  transition: all 0.3s ease;
+  z-index: 99;
+
+  i{
+    font-size: 1.5rem;
+  }
+}
+
+#topBtn:hover {
+  background-color: variables.$teal;
+  box-shadow: 3px 2px 20px #4e4c4c59;
+  transform: scale(1.1);
+  transition: all 0.1s ease;
+}
+

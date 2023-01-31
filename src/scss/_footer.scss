@@ -1,0 +1,58 @@
+@use 'variables';
+
+footer {
+    background-color: variables.$red;
+    padding: 24px 0;
+  }
+  
+  .footer__container {
+    display: grid;
+    grid-template-columns: 30% 30% 40%;
+    place-items: center;
+  }
+  
+  .footer__container__logo img {
+    width: 120px;
+  }
+  
+  .footer__container__rrss {
+    display: flex;
+    gap: 16px;
+  }
+  
+  .legalLink a {
+    color: var(--white) !important;
+  }
+  
+  .optanon-show-settings span {
+    color: variables.$white !important;
+    font-family: var(--font-family) !important;
+  }
+  
+  .legalLink{
+    color: white !important;
+}
+  
+  .footer__container__rrss a img {
+    transition: transform 0.3s ease;
+  }
+  
+  .footer__container__rrss a img:hover {
+    transform: scale(1.1);
+    transition: transform 0.1s ease;
+  }
+  
+  @media (max-width: 991.98px) {
+    .footer__container {
+      grid-template-columns: 1fr;
+    }
+  
+    .end-legal {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  
+    .fy {
+      text-align: center;
+    }
+  }

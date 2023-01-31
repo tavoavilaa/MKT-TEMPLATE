@@ -1,0 +1,61 @@
+@use 'variables';
+
+
+
+.navDown{
+    background-color: variables.$white;
+    box-shadow: variables.$shadow;
+    transition: all .5s ease;
+}
+
+  .avaya-navbar-logo{
+    align-items: center;
+    display: flex;
+}
+
+.avaya-tag-logo{
+    width: 120px;
+}
+
+.avaya-navbar img{
+    max-width: 120px;
+}
+
+
+
+.navbar{
+    padding: 24px;
+    transition: all .5s ease;
+}
+
+
+
+.nav-link{
+    color: variables.$denim !important;
+    font-size: 1rem;
+    transition: all .5s ease;
+
+    &:hover { 
+        color: variables.$red !important;
+        transition: all .3s ease;
+    }
+}
+
+
+
+.nav-link.active{
+    color: variables.$denim !important;
+    font-weight: 700;
+}
+
+.avaya-navbar{
+    justify-content: space-between;
+}
+
+.avaya-navbar__right-content{
+    margin: 0 auto;
+}
+
+.avaya-navbar__right-content{
+    gap: 24px;
+}
